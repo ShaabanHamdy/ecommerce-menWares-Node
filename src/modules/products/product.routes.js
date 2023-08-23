@@ -20,4 +20,7 @@ router.get("/getAllProducts",asyncHandler(controllers.getAllProducts))
 router.delete("/deleteProduct/:_id" , asyncHandler(controllers.deleteProduct))
 
 
+router.get("/getOneProduct/:_id" , asyncHandler(controllers.getOneProduct))
+
+
 export default router

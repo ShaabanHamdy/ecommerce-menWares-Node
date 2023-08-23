@@ -80,6 +80,18 @@ export const deleteProduct = async (req, res, next) => {
 
 }
 
+export const getOneProduct = async (req, res, next) => {
+
+    const product = await productModel.findById(req.params._id)
+
+    if (!product) {
+
+        return next(new Error ("there is not product with ") )
+    }
+    res.json({message:"success" , product})
+}
+
+
 
 
 
